@@ -20,70 +20,72 @@ function App() {
   const [menu, setMenu] = useState(0);
   const [category, setCat] = useState('Most Popular');
   const [book,setbk] = useState([
-{
-  name:'Harry Potter',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Saancadle'
-},
-{
-  name:'Hawaale Waran',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Hadraawi'
-},
-{
-  name:'Alsiraac',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Mustafe'
-},
-{
-  name:'Harry Potter',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Saancadle'
-},
-{
-  name:'Hawaale Waran',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Hadraawi'
-},
-{
-  name:'Alsiraac',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Mustafe'
-},
-{
-  name:'Harry Potter',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Saancadle'
-},
-{
-  name:'Hawaale Waran',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Hadraawi'
-},
-{
-  name:'Alsiraac',
-  src:img1,
-  category:'Novel',
-  description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-  author:'Mustafe'
-},
-  ])
+    {
+      name:'Harry Potter',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Saancadle'
+    },
+    {
+      name:'Hawaale Waran',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Hadraawi'
+    },
+    {
+      name:'Alsiraac',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Mustafe'
+    },
+    {
+      name:'Harry Potter',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Saancadle'
+    },
+    {
+      name:'Hawaale Waran',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Hadraawi'
+    },
+    {
+      name:'Alsiraac',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Mustafe'
+    },
+    {
+      name:'Harry Potter',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Saancadle'
+    },
+    {
+      name:'Hawaale Waran',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Hadraawi'
+    },
+    {
+      name:'Alsiraac',
+      src:img1,
+      category:'Novel',
+      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
+      author:'Mustafe'
+    },
+      ])
+
+
 
   const hclicker =() =>{
     if(menu == 0){
@@ -113,6 +115,7 @@ function App() {
         <Route exact path='/' element={
      <>
      <Header>
+     {console.log(JSON.stringify(book))}
       <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
     
