@@ -133,7 +133,7 @@ function App() {
 
 
     {(menu == 1) &&(
-        <Route exact path='/' element={
+        <Route exact path='/Somquest' element={
      <>
      <Header click={hclicker} notHome={true}>
      <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
@@ -161,10 +161,10 @@ function App() {
   //Categories
 
    {(menu == 0) &&(
-        <Route exact path='/Categories' element={
+        <Route exact path='/Somquest/Categories' element={
      <>
      <Header >
-     <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+     <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
       <span></span>
       <span></span>
@@ -179,10 +179,10 @@ function App() {
   )}
   
      {(menu == 1) &&(
-        <Route exact path='/categories' element={
+        <Route exact path='/Somquest/categories' element={
      <>
     <Header click={hclicker} notHome={true}>
-     <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+     <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
     
     <i className="gg-close"></i>
@@ -192,10 +192,10 @@ function App() {
      <div id='cate'>
        <form>
        <input id='rec1' placeholder='Search: '   onChange={searching}/>
-     <Link to={`/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
+     <Link to={`/Somquest/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
      </form>
      <div id='menh'>
-     <Link to='/categories' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
+     <Link to='/Somquest/categories' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
      <h1 id='menh2'>About-Us</h1>
      </div>
 </div>
@@ -203,7 +203,7 @@ function App() {
     }></Route>
      )}
 
-<Route path='/home/:search'  element={
+<Route path='/Somquest/home/:search'  element={
             <>
             <Header>
              <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
@@ -222,12 +222,12 @@ function App() {
 } />
 
 
-<Route exact path={`/s/:book`} element={
+<Route exact path={`/Somquest/s/:book`} element={
            <>
            <Header>
-            <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+            <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
           <span id='men' onClick={hclickerc}>
-          <Link to='/'>
+          <Link to='/Somquest'>
             <span></span>
             <span></span>
             </Link>
