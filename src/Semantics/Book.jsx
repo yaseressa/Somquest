@@ -10,7 +10,7 @@ function Book({setAuthor,name, src, author,category,setCaa,setDee,setNamer,descr
   }
   return (
     <div onClick={jj}>
-        <Link to={`/s/${name}`}>
+        <Link to={`/Somquest/s/${name}`}>
         <img src={src} width='150' height='250'/>
         <h4>{name}</h4>
         <h5>{author}</h5>

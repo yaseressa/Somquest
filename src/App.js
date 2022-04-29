@@ -116,7 +116,7 @@ function App() {
      <>
      <Header>
      {console.log(JSON.stringify(book))}
-      <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+      <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
     
       <span></span>
