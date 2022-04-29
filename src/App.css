@@ -1,38 +1,337 @@
-.App {
-  text-align: center;
+@import url('https://css.gg/close.css');
+@import url('http://fonts.cdnfonts.com/css/advent-pro');
+@import url('http://fonts.googleapis.com/css?family=Aladin');
+@import url('https://css.gg/search.css');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  overflow-x: none;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.63);
+  background-image: url('./images/-5789516285107877543_121.jpg');
+  background-size: cover;
+  background-blend-mode: darken;
+
+}
+#hdb{
+position: fixed;
+width: 100%;
+height: 79px;
+background: #000000;
+box-shadow: 0px 7px 20px rgba(255, 255, 255, 0.25);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 10;
+}
+#hdb h1{
+margin-left: 20px;
+font-family: 'Zen Dots';
+font-style: normal;
+font-weight: 400;
+font-size: 1.62em;
+text-transform: uppercase;
+line-height: 26px;
+letter-spacing: 0.300em;
+
+color: #FFFFFF;
+}
+#men{
+  margin-right: 20px;
+  width: 35px;
+  height: 28px;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+#men:hover{
+  cursor: pointer;
+  background-color: white;
+}
+#men span:nth-child(1){
+position: absolute;
+left: 13.04%;
+right: 13.04%;
+top: 28.57%;
+bottom: 53.57%;
+background: #C4C4C4;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#men span:nth-child(2){
+position: absolute;
+left: 13.04%;
+right: 13.04%;
+top: 57.14%;
+bottom: 25%;
+background: #C4C4C4;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#bodier{
+  background-color: #000000c9;
+  border-radius: 2%;
+  height: 100%;
+  width: 97%;
+  position: relative;
+  top: 70px;
+  left:1.6%;
+  transform:translateY(5.2%) ;
+}
+#bodier #btitle{
+  position: absolute;
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1.1em;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  top: 30px;
+  left: 4%;
+}
+#bodier #hd{
+  position: relative;
+  color: wheat;
+  width: 90%;
+  background-color: #FFFFFF;
+  height: 3px;
+  top: 60px;
+  left: 4%;
+}
+#booker{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top:100px ;
+
+}
+#booker > div{
+  margin: 20px;
+}
+#booker h5{
+text-align: center;
+font-family: 'Zen Dots';
+font-weight: 100;
+font-size:0.4em;
+
+}
+#booker h4{
+text-align: center;
+font-family: 'Aladin';
+font-weight: 100;
+padding: 10px;
+}
+#booker img{
+  box-shadow: 0 0 3px wheat;
+}
+.gg-close{
+  position: absolute;
+  left: 25%;
+  top: 8%;
+  color: #000000;
+
+}
+#rec1{
+position: absolute;
+color: black;
+text-align: center;
+font-family: 'Advent Pro';
+font-variant: small-caps;
+letter-spacing: 4px;
+text-transform: uppercase;
+font-size: 180%;
+width: 80%;
+height: 10%;
+left: 9.8%;
+top: 33%;
+background: #000000;
+border-radius: 10px;
+z-index: 0;
+border: 0;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#rec1:hover, #rec1:focus{
+  border: 0px;
+  background-color: rgb(165, 131, 131);
+  box-shadow:2px 3px 0 white;
+  transition:box-shadow 0.3s ease-in-out;
+  transform-origin: -100px;
+
+
+}
+#rec2{
+position: absolute;
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 8.3%;
+height: 6.5%;
+left: 80.5%;
+top: 34.8%;
+background-color: transparent;
+border-radius: 10px;
+border: 0;
+z-index: 1;
+}
+#rec2 i{
+  color: #FFFFFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#cate{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height:600px;
+  width: 100%;
+  position:absolute;
+  top: 10%;
+}
+  #menh{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+    height: 3%;
+    font-family: 'Aladin';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1.2em;
+    line-height: 29px;
+    letter-spacing: 0.12em;
+    color: #FFFFFF;
+  }
+  #menh h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: darkcyan;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  #cater{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  
+  }
+  #cater > div{
+    background-color: rgba(237, 229, 229, 0.51);
+    width: 200px;
+    height: 110px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+ 
+  #cater h1{
+  font-family: 'Zen Dots';
+  font-weight: 100;
+  font-size:1.7em;
+  padding-top: 16px;
+  
+  }
+#BB {
+  position: relative;
+  width:100%;
+  height: 100%;
+  top: 2%;
+  left: 4%;
+
+}
+#hd1{
+  font-family: 'Aladin';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  padding: 40px;
+
+}
+#hdBB{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-right: 40px;
+
+}
+#hdBB hr{
+  width: 90%;
+}
+#BB img{
+  width: 50%;
+  height: 35vh;
+
+}
+#BB #div-btn button:nth-child(odd){
+background: rgba(109, 121, 235, 0.59);
+border-radius: 7px;
+font-size: large;
+font-weight: 500;
+width: 100px;
+height: 50px;
+font-family: 'Advent Pro';
+}
+#BB #div-btn button:nth-child(even){
+  background: rgba(109, 235, 220, 0.59);
+  border-radius: 7px;
+  font-size: large;
+  font-weight: 500;
+  width: 100px;
+  height: 50px;
+  font-family: 'Advent Pro';
+  }
+#BB #div-btn{
+width: 60%;
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
+#BB #p1{
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+#BB #disc{
+  width: 90%;
+  height: 200px;
+  padding: 20px;
+}
+#BB #disc #hd2{
+  font-family: 'Advent Pro';
+}
+#BB #disc code{
+  text-align: center;
+  margin-left: 50%;
+}
+#BB #disc p{
+  font-family: 'Aladin';
+  word-wrap: break-word;
+  word-break: keep-all;
+  padding: 12px;
+  text-align: center;
 }
