@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Categories() {
     const [categ,setCateg] = useState([
@@ -13,7 +14,7 @@ export default function Categories() {
     
     <div id='cater'>
     {categ.map((cat) =>{
-       return <div ><h1>{cat}</h1></div>
+       return <div><Link to={`/categorizer/${cat}`}><h1>{cat}</h1></Link></div>
     })}
     </div>
   )

@@ -1,14 +1,15 @@
 import logo from './logo.svg';
-import {React, useState} from 'react'
+import {React, useEffect, useState} from 'react'
 import './App.css';
 import Header from './Semantics/Header';
-import {BrowserRouter as Router, Routes, Route,Link} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route,Link} from 'react-router-dom'
 import BooksLibrary from './Semantics/BooksLibrary';
 import img1 from './images/-5789516285107877536_121.jpg'
 import Bodier from './combo/Bodier'
 import Categories from './Semantics/Categories';
 import Searched from './Semantics/Searched';
 import BookBody from './Semantics/BookBody';
+import Categorizer from './Semantics/Categorizer';
 
 function App() {
   const [caa, setCaa] = useState('')
@@ -16,74 +17,17 @@ function App() {
   const [dee, setDee] = useState('')
   const [namer, setNamer] = useState('')
   const [valuer,setValuer] = useState('')
-  const [actval,setAct] = useState('')
+  const [kiki,setKiki] = useState('')
   const [menu, setMenu] = useState(0);
   const [category, setCat] = useState('Most Popular');
-  const [book,setbk] = useState([
-    {
-      name:'Harry Potter',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Saancadle'
-    },
-    {
-      name:'Hawaale Waran',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Hadraawi'
-    },
-    {
-      name:'Alsiraac',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Mustafe'
-    },
-    {
-      name:'Harry Potter',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Saancadle'
-    },
-    {
-      name:'Hawaale Waran',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Hadraawi'
-    },
-    {
-      name:'Alsiraac',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Mustafe'
-    },
-    {
-      name:'Harry Potter',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Saancadle'
-    },
-    {
-      name:'Hawaale Waran',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Hadraawi'
-    },
-    {
-      name:'Alsiraac',
-      src:img1,
-      category:'Novel',
-      description: '    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic omnis alias. Assumenda consequatur corporis adipisci ullam veniam pariatur placeat ab explicabo aspernatur! Quae enim quaerat reiciendis minima illum doloribus.',
-      author:'Mustafe'
-    },
-      ])
+  const [book,setbk] = useState(null)
+useEffect(() => {
+  fetch('http://192.168.1.112:3001/books')
+  .then(back => back.json())
+  .then(js =>{ setbk(js)})
+  .catch(err => console.log(err))
+
+}, [])
 
 
 
@@ -109,14 +53,14 @@ function App() {
   }
   return (
     <>
+ {book && 
     <Router>
       <Routes>
       {(menu == 0) &&(
-        <Route exact path='/Somquest' element={
+        <Route exact path='/' element={
      <>
      <Header>
-     {console.log(JSON.stringify(book))}
-      <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+      <Link to='/' onClick={cage}><h1 id='hdh' >Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
     
       <span></span>
@@ -133,10 +77,10 @@ function App() {
 
 
     {(menu == 1) &&(
-        <Route exact path='/Somquest/' element={
+        <Route exact path='/' element={
      <>
      <Header click={hclicker} notHome={true}>
-     <Link to='/Somquest/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+     <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
     
     <i className="gg-close"></i>
@@ -146,10 +90,10 @@ function App() {
      <div id='cate'>
        <form onSubmit={searcher}>
      <input id='rec1' placeholder='Search: '   onChange={searching}/>
-    <Link to={`/Somquest/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
+    <Link to={`/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
      </form>
      <div id='menh'>
-     <Link to='/Somquest/categories/' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
+     <Link to='/categories' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
      <h1 id='menh2'>About-Us</h1>
      </div>
 </div>
@@ -161,17 +105,17 @@ function App() {
   //Categories
 
    {(menu == 0) &&(
-        <Route exact path='/Somquest/Categories/' element={
+        <Route exact path='/Categories' element={
      <>
      <Header >
-     <Link to='/Somquest/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+     <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
       <span></span>
       <span></span>
     </span>
      </Header>
      <Bodier>
-     <Categories />
+     <Categories setKiki={setKiki}/>
      </Bodier>
      </>
     }>
@@ -179,10 +123,10 @@ function App() {
   )}
   
      {(menu == 1) &&(
-        <Route exact path='/Somquest/categories' element={
+        <Route exact path='/categories' element={
      <>
     <Header click={hclicker} notHome={true}>
-     <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+     <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
     <span id='men' onClick={hclicker}>
     
     <i className="gg-close"></i>
@@ -192,10 +136,10 @@ function App() {
      <div id='cate'>
        <form>
        <input id='rec1' placeholder='Search: '   onChange={searching}/>
-     <Link to={`/Somquest/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
+     <Link to={`/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
      </form>
      <div id='menh'>
-     <Link to='/Somquest/categories/' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
+     <Link to='/categories' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
      <h1 id='menh2'>About-Us</h1>
      </div>
 </div>
@@ -203,7 +147,7 @@ function App() {
     }></Route>
      )}
 
-<Route path='/Somquest/home/:search/'  element={
+<Route path='/home/:search'  element={
             <>
             <Header>
              <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
@@ -222,12 +166,12 @@ function App() {
 } />
 
 
-<Route exact path={`/Somquest/s/:book`} element={
+<Route exact path={`/s/:book`} element={
            <>
            <Header>
-            <Link to='/Somquest' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+            <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
           <span id='men' onClick={hclickerc}>
-          <Link to='/Somquest'>
+          <Link to='/'>
             <span></span>
             <span></span>
             </Link>
@@ -239,9 +183,27 @@ function App() {
           </Bodier>
           </>
 } />
+
+<Route path='/categorizer/:searcher' element={
+             <>
+             <Header>
+              <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+            <span id='men' onClick={hclickerc}>
+            <Link to='/'>
+              <span></span>
+              <span></span>
+              </Link>
+            </span>
+            
+            </Header>
+            <Bodier>
+               <Categorizer book={book} Kiki={kiki}/>
+            </Bodier>
+            </>
+} />
      </Routes>
      </Router>
-      
+}
     </>
     )
 }

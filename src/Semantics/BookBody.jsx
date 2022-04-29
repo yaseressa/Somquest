@@ -3,10 +3,12 @@ export default function BookBody({ name, description,category,author }) {
     const [namer,setnamer] = useState(name)
     const [desc,setDesc] = useState(description)
     const [catega,setCatega] = useState(category)
+    const [auth, setAuth] = useState(author)
     if(name != ""){
         setCookie('name', name, 1)
         setCookie('description', description,1)
         setCookie('category',category, 1)
+        setCookie('author',author, 1)
         }
    useEffect(() =>{
         let book = getCookie("name");
@@ -14,6 +16,7 @@ export default function BookBody({ name, description,category,author }) {
           setnamer( getCookie("name"))
           setDesc(getCookie("description"))
           setCatega(category = getCookie("category"))
+          setAuth(getCookie("author"))
 
         }
     },[])
@@ -24,17 +27,19 @@ export default function BookBody({ name, description,category,author }) {
         <div id='hdBB'>
         <h1 id='hd1'>{namer}</h1>
     <hr />
+    <cite><code style={{fontVariant : 'small-caps'}}>by: {auth}</code></cite>
         </div>
         <div id="p1">
-        <img src={require('../images/-5789516285107877536_121.jpg')} alt="" />
-        <div id='div-btn'>
+          <div>
         <div>
+        <img src={require('../images/-5789516285107877536_121.jpg')} alt="" />
+        </div>
+
+        </div>
+        <div id='div-btn'>
         <button>READ</button>
         <button>DOWNLOAD</button>
-        </div>
-        <div>
-          <cite>by: {author}</cite>
-        </div>
+
         </div>
         </div>
         <div id="disc">

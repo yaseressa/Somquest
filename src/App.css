@@ -274,9 +274,16 @@ z-index: 1;
   width: 90%;
 }
 #BB img{
-  width: 50%;
-  height: 35vh;
 
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  border: 4px rgb(17, 17, 51) groove;
+
+}
+#BB cite{
+  width: 87%;
+  margin-top: 12px;
 }
 #BB #div-btn button:nth-child(odd){
 background: rgba(109, 121, 235, 0.59);
@@ -286,7 +293,8 @@ font-weight: 500;
 width: 100px;
 height: 50px;
 font-family: 'Advent Pro';
-}
+
+border: 0;}
 #BB #div-btn button:nth-child(even){
   background: rgba(109, 235, 220, 0.59);
   border-radius: 7px;
@@ -295,6 +303,7 @@ font-family: 'Advent Pro';
   width: 100px;
   height: 50px;
   font-family: 'Advent Pro';
+  border: 0;
   }
 #BB #div-btn{
 width: 60%;
@@ -309,9 +318,9 @@ align-items: center;
 #BB #p1{
   
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-self: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 20px;
 
