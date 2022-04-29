@@ -112,7 +112,7 @@ function App() {
     <Router>
       <Routes>
       {(menu == 0) &&(
-        <Route exact path='/' element={
+        <Route exact path='/Somquest' element={
      <>
      <Header>
      {console.log(JSON.stringify(book))}
