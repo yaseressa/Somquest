@@ -21,7 +21,7 @@ function App() {
   const [category, setCat] = useState('Most Popular');
   const [book,setbk] = useState(null)
 useEffect(() => {
-  fetch('http://192.168.1.112:3001/books')
+  fetch('http://yaseressa.github.io/SQ-Json/Books.json')
   .then(back => back.json())
   .then(js =>{ setbk(js)})
   .catch(err => console.log(err))
