@@ -2,9 +2,8 @@ import logo from './logo.svg';
 import {React, useEffect, useState} from 'react'
 import './App.css';
 import Header from './Semantics/Header';
-import {HashRouter as Router, Routes, Route,Link} from 'react-router-dom'
+import {Routes, Route,Link} from 'react-router-dom'
 import BooksLibrary from './Semantics/BooksLibrary';
-import img1 from './images/-5789516285107877536_121.jpg'
 import Bodier from './combo/Bodier'
 import Categories from './Semantics/Categories';
 import Searched from './Semantics/Searched';
@@ -54,7 +53,7 @@ useEffect(() => {
   return (
     <>
  {book && 
-    <Router>
+
       <Routes>
       {(menu == 0) &&(
         <Route exact path='/' element={
@@ -202,7 +201,7 @@ useEffect(() => {
             </>
 } />
      </Routes>
-     </Router>
+     
 }
     </>
     )

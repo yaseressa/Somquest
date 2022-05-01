@@ -32,7 +32,7 @@ export default function BookBody({ name, description,category,author }) {
         <div id="p1">
           <div>
         <div>
-        <img src={require('../images/-5789516285107877536_121.jpg')} alt="" />
+        <img src={'./images/-5789516285107877536_121.jpg'} alt="" />
         </div>
 
         </div>
