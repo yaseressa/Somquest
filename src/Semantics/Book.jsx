@@ -19,7 +19,7 @@ function Book({setSrc,index,download ,setDown,setAuthor,name, src, author,catego
         <Link to={`/s/${name}`}>
   
       
-        <img src={`${src[index]}`} />
+        <img src={`${src[index]}`} loading="lazy"/>
         <h4>{name}</h4>
         <h5>{author}</h5>
         
