@@ -194,7 +194,7 @@ useEffect(() => {
              <Header>
               <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
             <span id='men' onClick={hclickerc}>
-            <Link to='/'>
+            <Link to='/categorizer/'>
               <span></span>
               <span></span>
               </Link>
