@@ -13,7 +13,7 @@
 }
 body{
   background-color: rgba(0, 0, 0, 0.63);
-  background-image: url('./images/-5789516285107877543_121.jpg');
+  background-image: url('./images/back.jpg');
   background-size: cover;
   background-blend-mode: darken;
 
@@ -107,26 +107,37 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-wrap: wrap;
   padding-top:100px ;
+  width: 100%;
 
 }
 #booker > div{
   margin: 20px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #booker h5{
 text-align: center;
 font-family: 'Zen Dots';
 font-weight: 100;
 font-size:0.4em;
-
+width: 150px;
+color: aquamarine;
 }
 #booker h4{
 text-align: center;
 font-family: 'Aladin';
 font-weight: 100;
 padding: 10px;
+word-wrap: break-word;
+word-break: keep-all;
+width: 150px;
 }
 #booker img{
   box-shadow: 0 0 3px wheat;
+  width: 150px;
 }
 .gg-close{
   position: absolute;
@@ -224,7 +235,7 @@ z-index: 1;
   #cater > div{
     background-color: rgba(237, 229, 229, 0.51);
     width: 200px;
-    height: 110px;
+    height: 90px;
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -235,8 +246,9 @@ z-index: 1;
   #cater h1{
   font-family: 'Zen Dots';
   font-weight: 100;
-  font-size:1.7em;
+  font-size:1em;
   padding-top: 16px;
+  text-align: center;
   
   }
 #BB {
@@ -286,7 +298,7 @@ z-index: 1;
   margin-top: 12px;
 }
 #BB #div-btn button:nth-child(odd){
-background: rgba(109, 121, 235, 0.59);
+background: rgb(63, 63, 63);
 border-radius: 7px;
 font-size: large;
 font-weight: 500;
@@ -304,6 +316,23 @@ border: 0;}
   height: 50px;
   font-family: 'Advent Pro';
   border: 0;
+  }
+#BB #div-btn button:nth-child(even):hover{
+    border: 2px black inset;
+    box-shadow: 3px 3px 1px whitesmoke;
+  }
+  #BB #div-btn button:nth-child(even) a:active{
+    border: 2px black inset;
+    box-shadow: 3px 3px 1px whitesmoke;
+  }
+  #BB #div-btn button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
   }
 #BB #div-btn{
 width: 60%;
@@ -327,15 +356,28 @@ align-items: center;
 }
 #BB #disc{
   width: 90%;
-  height: 200px;
+  height: 10%;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #BB #disc #hd2{
   font-family: 'Advent Pro';
+  border-top-left-radius:20px ;
+  border-top-right-radius:20px ;
+  background-color: rgba(245, 245, 220, 0.401);
+  width: 100%;
+  text-align: center;
 }
 #BB #disc code{
   text-align: center;
-  margin-left: 50%;
+  font-variant: small-caps;
+  padding: 3px;
+  background-color: rgba(0, 255, 255, 0.241);
+  width: 100%;
+
 }
 #BB #disc p{
   font-family: 'Aladin';
@@ -343,4 +385,8 @@ align-items: center;
   word-break: keep-all;
   padding: 12px;
   text-align: center;
+  border-bottom-left-radius:20px ;
+  border-bottom-right-radius:20px ;
+  background-color: rgba(245, 245, 220, 0.401);
+  width: 100%;
 }

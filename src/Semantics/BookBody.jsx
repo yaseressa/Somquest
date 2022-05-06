@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from 'react'
-export default function BookBody({ name, description,category,author }) {
+export default function BookBody({ source, download, name, description,category,author }) {
     const [namer,setnamer] = useState(name)
     const [desc,setDesc] = useState(description)
     const [catega,setCatega] = useState(category)
     const [auth, setAuth] = useState(author)
+    const[srcg,setSrcg] = useState(source)
+    const[dld,setDld] =useState(download)
     if(name != ""){
         setCookie('name', name, 1)
         setCookie('description', description,1)
         setCookie('category',category, 1)
         setCookie('author',author, 1)
+        setCookie('source',source, 1)
+        setCookie('down',download, 1)
         }
    useEffect(() =>{
         let book = getCookie("name");
         if (book != "") {
           setnamer( getCookie("name"))
           setDesc(getCookie("description"))
-          setCatega(category = getCookie("category"))
+          setCatega(getCookie("category"))
           setAuth(getCookie("author"))
+          setSrcg(getCookie('source'))
+          setDld(getCookie("down"))
+
 
         }
     },[])
@@ -32,13 +39,13 @@ export default function BookBody({ name, description,category,author }) {
         <div id="p1">
           <div>
         <div>
-        <img src={'./images/-5789516285107877536_121.jpg'} alt="" />
+        <img src={`${srcg}`} alt="" />
         </div>
 
         </div>
         <div id='div-btn'>
         <button>READ</button>
-        <button>DOWNLOAD</button>
+        <button><a href={dld}target='_blank'>DOWNLOAD</a></button>
 
         </div>
         </div>

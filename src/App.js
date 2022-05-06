@@ -9,6 +9,7 @@ import Categories from './Semantics/Categories';
 import Searched from './Semantics/Searched';
 import BookBody from './Semantics/BookBody';
 import Categorizer from './Semantics/Categorizer';
+import FileView from './Semantics/FileView';
 
 function App() {
   const [caa, setCaa] = useState('')
@@ -20,9 +21,11 @@ function App() {
   const [menu, setMenu] = useState(0);
   const [category, setCat] = useState('Most Popular');
   const [book,setbk] = useState(null)
+  const [down, setDown] = useState('')
+  const [source, setSrc] = useState('')
 useEffect(() => {
-  fetch('http://yaseressa.github.io/SQ-Json/Books.json')
-  .then(back => back.json())
+  fetch('https://som-quest.herokuapp.com/')
+  .then(back =>{ return back.json()})
   .then(js =>{ setbk(js)})
   .catch(err => console.log(err))
 
@@ -52,10 +55,9 @@ useEffect(() => {
   }
   return (
     <>
- {book && 
 
       <Routes>
-      {(menu == 0) &&(
+      {(book && menu == 0) &&(
         <Route exact path='/' element={
      <>
      <Header>
@@ -67,7 +69,7 @@ useEffect(() => {
     </span>
     </Header>
      <Bodier>
-     <BooksLibrary setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} books={book}/>
+     <BooksLibrary setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} books={book}/>
      </Bodier>
      </>
     }>
@@ -75,12 +77,12 @@ useEffect(() => {
   )}
 
 
-    {(menu == 1) &&(
+    {(book && menu == 1) &&(
         <Route exact path='/' element={
      <>
      <Header click={hclicker} notHome={true}>
      <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
-    <span id='men' onClick={hclicker}>
+    <span id='men' style={{backgroundColor: "grey"}} onClick={hclicker}>
     
     <i className="gg-close"></i>
     </span>
@@ -101,6 +103,45 @@ useEffect(() => {
       </Route>
   )}
 
+
+
+<Route path='/home/:search'  element={
+            <>
+            <Header>
+             <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+           <span id='men' onClick={hclickerc}>
+           <Link to='/'>
+             <span></span>
+             <span></span>
+             </Link>
+           </span>
+           
+           </Header>
+<Bodier>
+<Searched books={book} setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} />
+</Bodier>
+</>
+} />
+
+
+<Route exact path={`/s/:book`} element={
+           <>
+           <Header>
+            <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+          <span id='men' onClick={hclickerc}>
+          <Link to='/'>
+            <span></span>
+            <span></span>
+            </Link>
+          </span>
+          
+          </Header>
+          <Bodier>
+             <BookBody source={source} download={down} author={author} name={namer} category={caa} description={dee}/>
+          </Bodier>
+          </>
+} />
+
   //Categories
 
    {(menu == 0) &&(
@@ -114,7 +155,7 @@ useEffect(() => {
     </span>
      </Header>
      <Bodier>
-     <Categories setKiki={setKiki}/>
+     <Categories setCat={setCat} setKiki={setKiki}/>
      </Bodier>
      </>
     }>
@@ -126,7 +167,7 @@ useEffect(() => {
      <>
     <Header click={hclicker} notHome={true}>
      <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
-    <span id='men' onClick={hclicker}>
+    <span id='men' style={{backgroundColor: "grey"}} onClick={hclicker}>
     
     <i className="gg-close"></i>
     </span>
@@ -146,42 +187,7 @@ useEffect(() => {
     }></Route>
      )}
 
-<Route path='/home/:search'  element={
-            <>
-            <Header>
-             <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
-           <span id='men' onClick={hclickerc}>
-           <Link to='/'>
-             <span></span>
-             <span></span>
-             </Link>
-           </span>
-           
-           </Header>
-<Bodier>
-<Searched books={book} />
-</Bodier>
-</>
-} />
 
-
-<Route exact path={`/s/:book`} element={
-           <>
-           <Header>
-            <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
-          <span id='men' onClick={hclickerc}>
-          <Link to='/'>
-            <span></span>
-            <span></span>
-            </Link>
-          </span>
-          
-          </Header>
-          <Bodier>
-             <BookBody author={author} name={namer} category={caa} description={dee}/>
-          </Bodier>
-          </>
-} />
 
 <Route path='/categorizer/:searcher' element={
              <>
@@ -196,13 +202,16 @@ useEffect(() => {
             
             </Header>
             <Bodier>
-               <Categorizer book={book} Kiki={kiki}/>
+               <Categorizer  books={book} setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} />
             </Bodier>
             </>
 } />
-     </Routes>
+
+
+<Route path='/file/view/:name' element={<FileView/>} />
+</Routes>
      
-}
+
     </>
     )
 }
