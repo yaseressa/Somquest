@@ -10,9 +10,9 @@ function BooksLibrary({setCat,setSrc, setDown,setAuthor,category,setCaa,setDee,s
       .then(back =>{ return back.json()})
       .then(js =>{ setbk(js)})
       .catch(err => console.log(err))
-    
+      setCat('Most Popular')
     }, [])
-    setCat('Most Popular')
+
   return (
     <>
      <h4 id='btitle'>{category}</h4>
