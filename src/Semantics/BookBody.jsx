@@ -11,12 +11,24 @@ export default function BookBody() {
   
   }, [])
       console.log(bk)
-    const [namer,setnamer] = useState(bk.name)
-    const [desc,setDesc] = useState(bk.description)
-    const [catega,setCatega] = useState(bk.category)
-    const [auth, setAuth] = useState(bk.author)
-    const[srcg,setSrcg] = useState(bk.src)
-    const[dld,setDld] =useState(bk.down)
+    const [namer,setNamer] = useState('')
+    const [desc,setDesc] = useState('')
+    const [catega,setCatega] = useState('')
+    const [auth, setAuth] = useState('')
+    const[srcg,setSrcg] = useState('')
+    const[dld,setDld] =useState('')
+
+
+
+    if(bk != null){
+      setNamer(bk.name)
+      setDesc(bk.description)
+      setCatega(bk.category)
+      setAuth(bk.author)
+      setSrcg(bk.src)
+      setDld(bk.down)
+
+    }
     if(bk.name != ""){
         setCookie('name', bk.name, 1)
         setCookie('description', bk.description,1)
@@ -28,7 +40,7 @@ export default function BookBody() {
    useEffect(() =>{
         let book = getCookie("name");
         if (book != "") {
-          setnamer( getCookie("name"))
+          setNamer( getCookie("name"))
           setDesc(getCookie("description"))
           setCatega(getCookie("category"))
           setAuth(getCookie("author"))
