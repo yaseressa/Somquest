@@ -182,7 +182,7 @@ useEffect(() => {
       <div id='cate'>
         <form>
         <input id='rec1' placeholder='Search: '   onChange={searching}/>
-      <Link to={`/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
+      <Link to={`/home/${valuer}` } onClick={hclicker}> <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
       </form>
       <div id='menh'>
       <Link to='/categories' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
