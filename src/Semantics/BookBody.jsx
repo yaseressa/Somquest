@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-export default function BookBody({ source, download, name, description,category,author }) {
+export default function BookBody() {
   const{book} = useParams()
   const [bk, setbk] = useState(null)
   useEffect(() => {
