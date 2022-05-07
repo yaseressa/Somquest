@@ -69,7 +69,7 @@ useEffect(() => {
     </span>
     </Header>
      <Bodier>
-     <BooksLibrary setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} books={book}/>
+     <BooksLibrary setCat={setCat} setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} books={book}/>
      </Bodier>
      </>
     }>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Book from './Book'
 import BookBody from './BookBody'
 
-function BooksLibrary({setSrc, setDown,setAuthor,category,setCaa,setDee,setNamer}) {
+function BooksLibrary({setCat,setSrc, setDown,setAuthor,category,setCaa,setDee,setNamer}) {
     var src = [];
     const [books, setbk]  =useState([])
     useEffect(() => {
@@ -12,6 +12,7 @@ function BooksLibrary({setSrc, setDown,setAuthor,category,setCaa,setDee,setNamer
       .catch(err => console.log(err))
     
     }, [])
+    setCat('Most Popular')
   return (
     <>
      <h4 id='btitle'>{category}</h4>
