@@ -27,9 +27,7 @@ export default function BookBody() {
       setAuth(bk.author)
       setSrcg(bk.src)
       setDld(bk.down)
-
-    }
-    if(bk.name != ""){
+      if(bk.name != ""){
         setCookie('name', bk.name, 1)
         setCookie('description', bk.description,1)
         setCookie('category',bk.category, 1)
@@ -37,6 +35,8 @@ export default function BookBody() {
         setCookie('source',bk.src, 1)
         setCookie('down',bk.down, 1)
         }
+    }
+
    useEffect(() =>{
         let book = getCookie("name");
         if (book != "") {
