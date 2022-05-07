@@ -21,13 +21,13 @@ export default function BookBody() {
 
 
     if(bk != null){
-      setNamer(bk.name)
-      setDesc(bk.description)
-      setCatega(bk.category)
-      setAuth(bk.author)
-      setSrcg(bk.src)
-      setDld(bk.down)
       if(bk.name != ""){
+        setNamer(bk.name)
+        setDesc(bk.description)
+        setCatega(bk.category)
+        setAuth(bk.author)
+        setSrcg(bk.src)
+        setDld(bk.down)
         setCookie('name', bk.name, 1)
         setCookie('description', bk.description,1)
         setCookie('category',bk.category, 1)
