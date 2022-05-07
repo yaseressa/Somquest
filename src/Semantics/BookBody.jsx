@@ -17,13 +17,13 @@ export default function BookBody() {
     const [auth, setAuth] = useState(bk.author)
     const[srcg,setSrcg] = useState(bk.src)
     const[dld,setDld] =useState(bk.down)
-    if(name != ""){
-        setCookie('name', name, 1)
-        setCookie('description', description,1)
-        setCookie('category',category, 1)
-        setCookie('author',author, 1)
-        setCookie('source',source, 1)
-        setCookie('down',download, 1)
+    if(bk.name != ""){
+        setCookie('name', bk.name, 1)
+        setCookie('description', bk.description,1)
+        setCookie('category',bk.category, 1)
+        setCookie('author',bk.author, 1)
+        setCookie('source',bk.src, 1)
+        setCookie('down',bk.down, 1)
         }
    useEffect(() =>{
         let book = getCookie("name");
