@@ -104,16 +104,16 @@ useEffect(() => {
   )}
 
 
-
+{menu == 0 &&
 <Route path='/home/:search'  element={
             <>
             <Header>
              <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
            <span id='men' onClick={hclickerc}>
-           <Link to='/'>
+           
              <span></span>
              <span></span>
-             </Link>
+             
            </span>
            
            </Header>
@@ -122,6 +122,7 @@ useEffect(() => {
 </Bodier>
 </>
 } />
+}
 {menu == 1 &&
 <Route exact path={`/home/:search`} element={
      <>
@@ -154,10 +155,9 @@ useEffect(() => {
            <Header>
             <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
           <span id='men' onClick={hclickerc}>
-          <Link to='/'>
             <span></span>
             <span></span>
-            </Link>
+          
           </span>
           
           </Header>
