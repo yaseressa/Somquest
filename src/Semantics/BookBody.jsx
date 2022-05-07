@@ -10,22 +10,13 @@ export default function BookBody() {
     .catch(err => console.log(err))
   
   }, [])
-  var download, name , source ,description,category,author;
-  if(bk != null){
-     download = bk.down
-     name = bk.name
-     source = bk.src
-     description = bk.description
-     category = bk.category
-     author = bk.author
-
-  }
-    const [namer,setnamer] = useState(name)
-    const [desc,setDesc] = useState(description)
-    const [catega,setCatega] = useState(category)
-    const [auth, setAuth] = useState(author)
-    const[srcg,setSrcg] = useState(source)
-    const[dld,setDld] =useState(download)
+      console.log(bk)
+    const [namer,setnamer] = useState(bk.name)
+    const [desc,setDesc] = useState(bk.description)
+    const [catega,setCatega] = useState(bk.category)
+    const [auth, setAuth] = useState(bk.author)
+    const[srcg,setSrcg] = useState(bk.src)
+    const[dld,setDld] =useState(bk.down)
     if(name != ""){
         setCookie('name', name, 1)
         setCookie('description', description,1)
