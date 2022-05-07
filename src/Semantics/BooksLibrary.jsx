@@ -19,7 +19,7 @@ function BooksLibrary({setSrc, setDown,setAuthor,category,setCaa,setDee,setNamer
     <div id='booker'>
       {books.map((book, index) =>{
         src.push(book.src)
-        return <Book setSrc={setSrc} setDown={setDown} download={book.down} key={index} index={index} setAuthor={setAuthor} category={book.category} description={book.description} setCaa={setCaa} setDee={setDee} setNamer={setNamer} name={book.name} src={src} author={book.author}/>
+        return <Book named={book.named} setSrc={setSrc} setDown={setDown} download={book.down} key={index} index={index} setAuthor={setAuthor} category={book.category} description={book.description} setCaa={setCaa} setDee={setDee} setNamer={setNamer} name={book.name} src={src} author={book.author}/>
       })}
       
     </div> 

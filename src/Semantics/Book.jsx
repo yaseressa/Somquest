@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 
-function Book({setSrc,index,download ,setDown,setAuthor,name, src, author,category,setCaa,setDee,setNamer,description}) {
+function Book({named, setSrc,index,download ,setDown,setAuthor,name, src, author,category,setCaa,setDee,setNamer,description}) {
   const jj = () =>{
      setDee(description)
      setCaa(category)
@@ -16,7 +16,7 @@ function Book({setSrc,index,download ,setDown,setAuthor,name, src, author,catego
 
     <div onClick={jj}>
              
-        <Link to={`/s/${name}`}>
+        <Link to={`/s/${named}`}>
   
       
         <img src={`${src[index]}`} loading="lazy"/>

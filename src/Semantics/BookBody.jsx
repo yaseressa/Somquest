@@ -1,5 +1,25 @@
 import React, { useEffect, useState } from 'react'
-export default function BookBody({ source, download, name, description,category,author }) {
+import { useParams } from 'react-router-dom'
+export default function BookBody() {
+  const{book} = useParams()
+  const [bk,setbk] = useState(null)
+  useEffect(() => {
+    fetch(`https://som-quest.herokuapp.com/s/${book}`)
+    .then(back =>{ return back.json()})
+    .then(js =>{ setbk(js)})
+    .catch(err => console.log(err))
+  
+  }, [])
+  var download, name , source ,description,category,author;
+  if(bk != null){
+     download = bk.down
+     name = bk.name
+     source = bk.src
+     description = bk.description
+     category = bk.category
+     author = bk.author
+
+  }
     const [namer,setnamer] = useState(name)
     const [desc,setDesc] = useState(description)
     const [catega,setCatega] = useState(category)
