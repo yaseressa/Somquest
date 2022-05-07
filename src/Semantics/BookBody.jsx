@@ -4,7 +4,7 @@ export default function BookBody({ source, download, name, description,category,
   const{book} = useParams()
   const [bk, setbk] = useState(null)
   useEffect(() => {
-    fetch('https://som-quest.herokuapp.com/s/')
+    fetch(`https://som-quest.herokuapp.com/s/${book}`)
     .then(back =>{ return back.json()})
     .then(js =>{ setbk(js)})
     .catch(err => console.log(err))
