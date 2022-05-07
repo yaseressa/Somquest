@@ -197,7 +197,7 @@ useEffect(() => {
              <Header>
               <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
             <span id='men' onClick={hclickerc}>
-            <Link to={`/categorizer/${category}`}>
+            <Link to={`/categorizer/${category}`} onClick={hclickerc}>
               <span></span>
               <span></span>
               </Link>
@@ -212,11 +212,12 @@ useEffect(() => {
 <>
     <Header click={hclicker} notHome={true}>
      <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+     <Link to={`/categorizer/${category}`} onClick={cage}>
     <span id='men' style={{backgroundColor: "grey"}} onClick={hclicker}>
     
     <i className="gg-close"></i>
     </span>
-
+    </Link>
      </Header>
      <div id='cate'>
        <form>
