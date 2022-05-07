@@ -190,7 +190,10 @@ useEffect(() => {
 
 
 <Route path='/categorizer/:searcher' element={
+  
              <>
+             {menu == 0 &&
+               <>
              <Header>
               <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
             <span id='men' onClick={hclickerc}>
@@ -204,6 +207,29 @@ useEffect(() => {
             <Bodier>
                <Categorizer  books={book} setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} />
             </Bodier>
+            </>
+}{menu ==1 &&
+<>
+    <Header click={hclicker} notHome={true}>
+     <Link to='/' onClick={cage}><h1 id='hdh'>Somquest</h1></Link>
+    <span id='men' style={{backgroundColor: "grey"}} onClick={hclicker}>
+    
+    <i className="gg-close"></i>
+    </span>
+
+     </Header>
+     <div id='cate'>
+       <form>
+       <input id='rec1' placeholder='Search: '   onChange={searching}/>
+     <Link to={`/home/${valuer}` } > <button type='submit' id='rec2'><i className="gg-search"></i></button></Link>
+     </form>
+     <div id='menh'>
+     <Link to='/categories' onClick={hclicker}><h1 id='menh1'>Categories</h1></Link>
+     <h1 id='menh2'>About-Us</h1>
+     </div>
+</div>
+     </>
+}
             </>
 } />
 
