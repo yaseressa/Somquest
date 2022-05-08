@@ -390,3 +390,7 @@ align-items: center;
   background-color: rgba(245, 245, 220, 0.401);
   width: 100%;
 }
+#trans{
+  background-color: #c4c4c45b;
+  color: #000000;
+}

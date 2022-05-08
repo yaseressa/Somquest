@@ -57,7 +57,7 @@ useEffect(() => {
     <>
 
       <Routes>
-      {(book && menu == 0) &&(
+      {(menu == 0) &&(
         <Route exact path='/' element={
      <>
      <Header>
@@ -77,7 +77,7 @@ useEffect(() => {
   )}
 
 
-    {(book && menu == 1) &&(
+    {(menu == 1) &&(
         <Route exact path='/' element={
      <>
      <Header click={hclicker} notHome={true}>
