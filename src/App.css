@@ -335,7 +335,7 @@ border: 0;}
 
   }
 #BB #div-btn{
-width: 60%;
+width: 0%;
 height: 200px;
 display: flex;
 flex-direction: column;
@@ -348,7 +348,7 @@ align-items: center;
   
   display: flex;
   justify-content: space-around;
-  align-self: center;
+  align-items: flex-end;
   width: 90%;
   height: 100%;
   padding: 20px;
