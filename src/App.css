@@ -384,6 +384,7 @@ align-items: center;
   word-wrap: break-word;
   word-break: keep-all;
   padding: 12px;
+  font-variant: small-caps;
   text-align: center;
   border-bottom-left-radius:20px ;
   border-bottom-right-radius:20px ;
