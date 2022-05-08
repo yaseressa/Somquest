@@ -71,7 +71,7 @@ useEffect(() => {
      <Bodier>
      {book ?
      <BooksLibrary setCat={setCat} setSrc={setSrc} setDown={setDown} setAuthor={setAuthor} setCaa={setCaa} setNamer={setNamer} setDee={setDee} category={category} books={book}/>
-     :<img src='https://yaseressa.github.io/SQ-Images/j.gif' id='f' width={'30%'} height={'150'} />}
+     :<img src='https://yaseressa.github.io/SQ-Images/j.gif' id='f' width={'30%'} height={'200'} />}
      </Bodier>
      </>
     }>

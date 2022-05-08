@@ -399,7 +399,7 @@ color: white;
 position: relative;
 left: 35%;
 right: 35%;
-filter: drop-shadow(0 0 10px white);
+filter: drop-shadow(2px 1px 1px white);
 transform: translateY(10%, -35%);
 
 
