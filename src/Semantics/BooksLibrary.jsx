@@ -15,6 +15,8 @@ function BooksLibrary({setCat,setSrc, setDown,setAuthor,category,setCaa,setDee,s
 
   return (
     <>
+    {books && 
+    <>
      <h4 id='btitle'>{category}</h4>
     <hr id='hd'/>
     <div id='booker'>
@@ -24,7 +26,8 @@ function BooksLibrary({setCat,setSrc, setDown,setAuthor,category,setCaa,setDee,s
       })}
       
     </div> 
-
+    </>
+}
     </>
     
   )

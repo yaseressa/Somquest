@@ -397,10 +397,10 @@ align-items: center;
 #f{
 color: white;
 position: relative;
-top: 100%;
 left: 35%;
+right: 35%;
 filter: drop-shadow(0 0 10px white);
-transform: translateY(10%);
+transform: translateY(10%, -35%);
 
 
 }
