@@ -394,3 +394,13 @@ align-items: center;
   background-color: #c4c4c45b;
   color: #000000;
 }
+#f{
+color: white;
+position: relative;
+top: 100%;
+left: 35%;
+filter: drop-shadow(0 0 10px white);
+transform: translateY(10%);
+
+
+}
